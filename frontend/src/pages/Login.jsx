@@ -2,18 +2,11 @@ import { useState } from "react";
 import API from "../api";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
-
 export default function Login() {
-
     const [form, setForm] = useState({});
-
     const nav = useNavigate();
-
     const login = async () => {
-
         const res = await API.post("/auth/login", form);
-
         localStorage.setItem("token", res.data.token);
         toast.success("Login Successful");
 
@@ -35,15 +28,12 @@ export default function Login() {
 
         // </div>
 
-
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
 
             <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-sm">
-
                 <h1 className="text-3xl font-bold text-center mb-6">
                     Login
                 </h1>
-
                 <input
                     type="email"
                     placeholder="Email"
