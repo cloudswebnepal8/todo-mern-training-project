@@ -79,7 +79,7 @@ export default function Signup() {
                 </button>
 
                 <p className="p-2 text-center">Already have an account ?
-                    <a className="pl-1 hover:underline" href="/">Login</a>
+                    <Link className="pl-1 hover:underline" to="/">Login</Link>
                 </p>
             </div>
         </div>

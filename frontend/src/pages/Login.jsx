@@ -56,7 +56,7 @@
 
 import { useState } from "react";
 import API from "../api";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export default function Login() {
@@ -181,12 +181,12 @@ export default function Login() {
 
                     Don't have an account?
 
-                    <a
-                        href="/signup"
+                    <Link
+                        to="/signup"
                         className="text-blue-600 ml-1 hover:underline"
                     >
                         Signup
-                    </a>
+                    </Link>
 
                 </p>
 
