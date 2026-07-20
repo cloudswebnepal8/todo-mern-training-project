@@ -82,7 +82,7 @@ export default function Todo() {
         <div className="max-w-5xl mx-auto p-8">
 
             <h1 className="text-3xl font-bold mb-5">
-                Todo App
+                Todos App
             </h1>
             <button
                 onClick={logout}

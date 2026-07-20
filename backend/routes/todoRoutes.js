@@ -6,7 +6,7 @@ const todo = require("../controllers/todoController");
 
 router.get("/", auth, todo.getTodos);
 
-router.post("/", auth, todo.addTodo);
+router.post("/add", auth, todo.addTodo);
 
 router.put("/:id", auth, todo.updateTodo);
 

@@ -1,20 +1,30 @@
 import { useState } from "react";
-import API from "../api";
+
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import API from "../api";
 export default function Signup() {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     const [form, setForm] = useState({});
+
     const submit = async () => {
+
         try {
             const res = await API.post("/auth/signup", form);
-            toast.success("Signup successful")
+            
+            toast.success("Signup Successful");
+
             navigate("/")
-            // alert(res.data.message);
-        } catch (err) {
-            console.log(err.response.data);
+
         }
-    };
+        catch (err) {
+            toast.error(err.response.data.message);
+            console.log(err)
+            alert(err.response.data.message);
+
+        }
+
+    }
     return (
 
         // <div className="p-10">
@@ -32,6 +42,8 @@ export default function Signup() {
         //     <button onClick={submit}>Signup</button>
 
         // </div>
+
+        
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
 
             <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-sm">

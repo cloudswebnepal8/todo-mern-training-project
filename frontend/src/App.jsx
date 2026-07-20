@@ -7,14 +7,10 @@ import ProtectedRoute from "./ProtectedRoutes/ProtectedRoute";
 import PublicRoute from "./ProtectedRoutes/PublicRoute";
 import "./App.css"
 import { ToastContainer } from "react-toastify";
-
-
 export default function App() {
   return (
-
     <>
       <Routes>
-
         <Route
           path="/"
           element={
@@ -32,6 +28,7 @@ export default function App() {
             </PublicRoute>
           }
         />
+
 
         <Route
           path="/todo"
