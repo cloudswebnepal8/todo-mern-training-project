@@ -7,7 +7,7 @@ const connect = require("./config/db");
 
 const app = express();
 app.get("/", (req, res) => {
-    res.send("Backend is running successfully on Render!");
+    res.send("Backend is running on Render!");
 });
 
 connect();
