@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:4000"
+    baseURL: "https://backendwebsite-omkg.onrender.com/"
 });
 
 API.interceptors.request.use(config => {
